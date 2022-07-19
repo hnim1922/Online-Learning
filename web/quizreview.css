@@ -1,0 +1,178 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+header
+{
+    text-align: center;
+    font-size: x-large;
+    padding: 2%;
+    background: #5F9EA0 ;
+}
+
+.review-progress
+{
+    width: 20%;
+    float: left;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 6%;
+}
+.review-card
+{
+    margin-top: 1%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin-right: 1%;
+}   
+.review-box
+{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 20%;
+}
+/*.review-progress footer
+{
+    margin-left: 25%;
+    text-align: center;
+    width: 40%;
+    margin-top: 30%;
+    margin-bottom: 3%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-radius: 10px;
+    background: #5F9EA0;
+    font-weight: bold;
+    font-size: larger;
+}*/
+/*.review-progress footer:hover
+{
+    transform: scale(1.05);
+}*/
+.question-infomation
+{
+    float: left;
+    width: 80%;
+    padding-left: 4%;
+    font-size: 150%;
+    padding-top: 1%;
+}
+.question-card
+{
+    margin-top: 7%;
+}
+ .popup
+{
+    text-align: center;
+    padding: 1%;
+    width: 15%;
+    background: #5F9EA0;
+    border-radius: 10px;
+    float: right;
+    margin-right: 20%;
+    font-size: smaller;
+}
+
+.popup:hover
+{
+    background-color:darkcyan;
+    transform: scale(1.05);
+}
+  .correct
+  {
+/*      display: none;*/
+      margin-left: 1%;
+  }
+footer
+{
+    margin-top: 5%;
+    margin-left: 35%;
+    text-align: center;
+    width: 13%;
+    margin-bottom: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 10px;
+    background: #5F9EA0;
+    font-weight: bold;
+    color: #ffffff;
+}
+input[type=submit]
+{
+  font-size: larger;
+  background: #5F9EA0;
+  border: none;
+  color: white;
+  text-decoration: none;
+  margin: 4px 2px;
+  
+  cursor: pointer;
+}
+footer:hover
+{
+    transform: scale(1.05);
+}
+.correct-answer
+{
+    background: lightgreen;
+    border-radius: 10px;
+    width: 40%;
+    padding:1%;
+}
+.incorrect-confirm
+{   background: lightcoral;
+     border-radius: 10px;
+    width: 40%;
+    padding:1%;
+    margin-bottom: 2%;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 400px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  text-align: center;
+  background: #5F9EA0;
+  border-radius: 20px;
+  color: #ffffff
+}
+
+ The Close Button 
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

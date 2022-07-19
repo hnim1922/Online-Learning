@@ -1,0 +1,853 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/* 
+Created on : Jun 2, 2021, 8:52:10 PM
+Author     : ihtng
+*/
+
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/* 
+Created on : May 31, 2021, 4:33:22 PM
+Author     : ihtng
+*/
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: azure;
+}
+
+header {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.topbar-right {
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.topnav a {
+    color: black;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.search-bar {
+    display: flex;
+    padding-top: 5%;
+    align-items: center;
+}
+
+.search-bar>input {
+    font-size: 18px;
+    padding-left: 30px;
+    width: 500px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.login-btn {
+    margin-right: 30px;
+    background-color: cadetblue;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.login-btn:hover,
+#change-password-form .submit-button:hover,
+#reset-password-email-form .submit-button:hover,
+#reset-password-password-form .submit-button:hover{
+    background-color: rgb(71, 117, 119);
+    color: white;
+}
+
+.signup-btn {
+    background-color: rgb(206, 25, 61);
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.signup-btn:hover,
+#change-password-form .cancel-button:hover,
+#reset-password-email-form .cancel-button:hover,
+#reset-password-password-form .cancel-button:hover {
+    background-color: rgb(173, 20, 51);
+    color: white;
+}
+
+.logo {
+    padding-left: 50px;
+}
+
+.topnav a.active {
+    background-color: cadetblue;
+    color: white;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.course-list {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
+
+.course-card {
+    /*    flex: 0 0 80%;*/
+    margin-bottom: 50px;
+    margin-right: 50px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    width: 400px;
+    height: auto;
+    transition: 0.3s;
+}
+
+.course-card>a:first-child {
+    text-decoration: none;
+    color: black;
+}
+
+.course-card:hover {
+    background-color: rgb(238, 234, 234);
+    transform: scale(1.05);
+}
+
+.course-thumbnail {
+    width: 400px;
+    height: 180px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.course-information {
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.course-information p,
+h3,
+.progress-bar,
+.progress-complete,
+img,
+a {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    cursor: context-menu;
+}
+
+.start-course-btn {
+    margin-left: 20px;
+    cursor: pointer;
+    width: max-content;
+}
+
+.progress-bar {
+    background-color: lightgrey;
+    color: white;
+    border-radius: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.progress-complete {
+    background-color: cadetblue;
+    width: 50%;
+    border-radius: inherit;
+    padding-left: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.studied>.start-course-btn {
+    display: none;
+}
+
+.not-study>.progress-bar {
+    display: none;
+}
+
+.signup-in-login-box {
+    text-decoration: underline;
+    color: rgb(206, 25, 61);
+    cursor: pointer;
+}
+
+.container {
+    font-family: 'Poppins', sans-serif;
+    padding: 16px;
+    width: 70%;
+}
+
+.btn button:first-child {
+    background-color: #5F9EA0;
+    float: left;
+    width: 60%;
+    border-radius: 10px;
+    font-size: larger;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.btn button:first-child:hover {
+    background-color: rgb(71, 117, 119);
+    color: white;
+}
+
+.btn button:nth-child(2) {
+    width: 20%;
+    background-color: rgb(206, 25, 61);
+    margin-left: 11%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: larger;
+    transition: 0.3s;
+}
+
+.btn button:nth-child(2):hover {
+    background-color: rgb(173, 20, 51);
+    color: white;
+}
+
+.txt {
+    color: #00618A;
+}
+
+.btn button {
+    font-weight: 500;
+    border: none;
+    padding: 15px;
+    color: #fff;
+    font-weight: lighter;
+}
+
+.btn a {
+    color: #00618A;
+    font-style: italic;
+}
+
+.reset {
+    float: left;
+    padding-right: 5%;
+}
+
+.change {
+    float: right;
+    padding-right: 5%;
+}
+
+.txt input {
+    width: 95%;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    font-size: larger;
+}
+
+.txt ::placeholder {
+    font-size: x-small;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-expire {
+    display: block;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    display: flex;
+    background-color: #B5F8D9;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: max-content;
+    /* Could be more or less, depending on screen size */
+}
+
+.close-button {}
+
+
+/* Add Zoom Animation */
+
+.animate {
+    -webkit-animation: animatezoom 0.4s;
+    animation: animatezoom 0.4s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.profile-zone {
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+    cursor: pointer;
+}
+
+.avatar {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-name {
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#login-form .left-image,
+#change-password-form .left-image,
+#reset-password-email-form .left-image,
+#reset-password-password-form .left-image,
+#signup-form .left-image {
+    width: 50%;
+    height: inherit;
+    background-color: #5F9EA0;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+td:nth-child(2) {
+    padding-left: 50px;
+    padding-right: 16px;
+}
+
+tr {
+    padding: 50px;
+}
+
+#change-password-form input,
+#reset-password-email-form input,
+#reset-password-password-form input,
+#signup-form input {
+    border-radius: 6px;
+    width: 100%;
+    height: 40px;
+    border: none;
+}
+
+table input::placeholder {
+    padding-left: 3px;
+    font-size: 80%;
+}
+
+td {
+    padding-bottom: 20px;
+}
+
+#change-password-form .submit-button,
+#change-password-form .cancel-button,
+#reset-password-email-form .submit-button,
+#reset-password-email-form .cancel-button,
+#reset-password-password-form .cancel-button,
+#reset-password-password-form .submit-button,
+#signup-button,
+#cancel-button-signup,
+.close-button, #user-profile .cancel-button {
+    transition: 0.3s;
+    color: white;
+    border: none;
+    font-size: large;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #5F9EA0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close-button {
+    background-color: red;
+    margin-left: 150%;
+}
+
+#change-password-form .cancel-button,
+#reset-password-email-form .cancel-button,
+#reset-password-password-form .cancel-button,
+#cancel-button-signup {
+    background-color: rgb(206, 25, 61);
+}
+
+main {
+    display: flex;
+    height: max-content;
+}
+
+.sider-course-list {
+    /*    position: -webkit-sticky;  Safari 
+    position: sticky;
+    align-self: flex-start;
+    top: 20px;*/
+    width: 20%;
+    height: auto;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 50px;
+    margin-bottom: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+}
+
+.contact-info {
+    display: flex;
+}
+
+.contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    transition: 0.3s;
+    margin-right: 25px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact-button:hover {
+    background-color: rgb(238, 234, 234);
+    transform: scale(1.05);
+}
+
+.subject-categories-container {
+    display: inline-block;
+    border: 1px solid #28a745;
+    padding: 3px 8px;
+    border-radius: 3px;
+    outline: 0;
+    color: #28a745;
+    margin: 5px;
+    transition: 50ms;
+}
+
+.subject-categories {
+    margin-right: 20px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.subject-categories-active {
+    margin-right: 20px;
+    cursor: pointer;
+    background-color: cadetblue;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.small-thumbnail {
+    width: 400px;
+    height: auto;
+    padding: 6px;
+}
+
+.latest-post {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.blog:hover {
+    background-color: rgb(238, 234, 234);
+    transform: scale(1.05);
+}
+
+.blog-title {
+    margin-left: 2%;
+    overflow: hidden;
+}
+
+.blog-title a {
+    overflow: hidden;
+    margin-top: 10px;
+    padding-top: 20%;
+    padding-bottom: 10%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.blog-title a strong {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: small;
+    overflow: hidden;
+}
+
+.homepage__browse {
+    /* display: flex;
+    flex-direction: column; */
+    margin-left: 3%;
+    padding: 2rem 2rem 2rem 2rem;
+    background-color: #fff;
+    height: max-content;
+    width: 17%;
+    border-radius: 5px;
+    margin-bottom: 5rem;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.homepage__browse h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    cursor: default;
+}
+
+.browse__tags a {
+    text-decoration: none;
+    background-color: #5F9EA0;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 20px;
+    outline: 0;
+    color: white;
+    margin: 5px;
+    transition: 50ms;
+}
+
+.browse__tags a:hover {
+    color: #fff;
+    background-color: rgb(40, 167, 69);
+    border-color: rgb(40, 167, 69);
+    text-decoration: none;
+}
+
+.course-list-container {
+    margin-right: 50px;
+    margin-bottom: 30px;
+    background-color: white;
+    width: max-content;
+    margin-left: 10%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.blog {
+    margin-bottom: 10%;
+    align-items: center;
+}
+
+
+/* Pagination links */
+
+.pagination a {
+    display: flex;
+    width: 100%;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+
+/* Style the active/current link */
+
+.pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+
+/* Add a grey background color on mouse-over */
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.course-list-container {
+    margin-left: 10%;
+    width: 75%;
+}
+
+.blog-detail-title {
+    margin-left: 15%;
+    margin-bottom: 15%;
+    align-items: center;
+    align-self: center;
+    width: 50%;
+}
+
+.blog-detail-title h1 {
+    align-self: inherit;
+    letter-spacing: -0.011em;
+    font-size: 46px;
+    line-height: 56px;
+}
+
+.blog-detail-title #blog-author {
+    font-weight: 600;
+    font-size: x-large;
+}
+
+.blog-detail-title #blog-detail-date {
+    margin-left: 2%;
+}
+
+.blog-detail-thumbnail {
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+.blog-detail-title #blog-detail-content {
+    width: 170%;
+    height: auto;
+    font-size: 20px;
+}
+
+.course {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-color: #5F9EA0;
+    transition: 0.2s
+}
+
+.course-list-thumbnail {
+    align-self: center;
+    height: 200px;
+    width: 200px;
+    padding: 6px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.course:hover {
+    /*background-color: rgb(238, 234, 234);*/
+    transform: scale(1.05);
+}
+
+.course-title {
+    width: max-content;
+    align-self: center;
+    margin-left: 2%;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.course-title a {
+    overflow: hidden;
+    margin-top: 10px;
+    padding-top: 20%;
+    padding-bottom: 10%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+}
+
+.course-title a strong {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 50px;
+    overflow: hidden;
+}
+
+.total-price {
+    text-align: end;
+    margin-right: 50px;
+}
+
+.buttons {
+    text-align: end;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.deletebtn {
+    align-self: center;
+    text-align: end;
+    align-items: end;
+    margin-left: 20%;
+    transition: 0.3s;
+}
+
+.deletebtn:hover {
+    background-color: #5F9EA0;
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
+.drop-btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    padding-top: 17%;
+    position: relative;
+    display: inline-block;
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.drop-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.drop-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .drop-content {
+    display: block;
+}
+
+.dropdown:hover .drop-btn {
+    background-color: #3e8e41;
+}
